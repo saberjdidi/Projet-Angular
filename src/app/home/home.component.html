@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+
+
+<div class="container">
+  <h1 class="mt-5">Bonjour {{Message}}</h1>
+  
+  <input type="text" #mymsg>  <button (click)="btnClicked(mymsg.value)"> click me !</button>
+
+  <br>
+  <input type="text"  [(ngModel)]="Message">
+
+
+  <br>
+  <br>
+  <br>
+
+  <button (click)="isDisabled = !isDisabled"> submit </button>
+<button [disabled]="isDisabled" (click)="btnClicked('cava')"> retour</button>
+</div>
+
